@@ -4,11 +4,14 @@
          * Construct.
          */
         function __construct() {
-
+            modalShow();
         }
 
         function modalShow(){
-            
+            let $button = $('#modal-button');
+            $button.on('click', function(){
+                console.log("Clicked");
+            });
         }
         
         /**

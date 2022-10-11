@@ -1,0 +1,33 @@
+.body{
+    margin: 0;
+}
+
+.main-container{
+    display: block;
+    position: relative;
+}
+
+.main-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #165cd6;
+    height: 50px;
+    width: 150px;
+    color: #FFF;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all .3s ease;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: #165cd691;
+}
