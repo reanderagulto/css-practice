@@ -1,0 +1,109 @@
+:root{
+    --font-family-lato: 'Lato', sans-serif;
+    --font-family-rubik: 'Rubik', sans-serif;
+    --color-vivid-orange: #ff6900;
+    --color-white: #ffffff;
+    --color-gray: #777;
+
+    --bg-cards: #434343;
+    --bg-cards-linear: linear-gradient(85deg,#434343,#262626);
+}
+
+body{
+    font-style: var(--font-family-lato);
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.main-container {
+    width: 1600px;
+    margin: 0 auto;
+}
+
+.main-container .minicard-grid {
+    scrollbar-color: #666 #201c29;
+    scrollbar-gutter: always;
+    padding: 3rem 0 3rem 2rem;
+    margin: 0;
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.minicard-grid .minicard.module {
+    min-width: 300px;
+    min-height: 350px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-cards-linear);
+    color: var(--color-white);
+    border-radius: 16px;
+    transition: .2s;
+}
+
+.minicard.module .card-author {
+    display: flex;
+    -webkit-margin-before: auto;
+    margin-block-start: auto;
+    align-items: center;
+    color: #565656;
+    line-height: 1.3;
+    padding-top: 0.5rem;
+}
+
+.minicard.module .card-author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+.minicard.module .card-tags {
+    text-transform: uppercase;
+}
+
+.minicard.module .card-tags a {
+    font-family: var(--font-family-lato);
+    color: var(--color-vivid-orange);
+    font-weight: bold;
+    transition: 0.2s;
+    font-size: .66rem;
+    margin-inline-end: .66rem;
+}
+
+.minicard.module .card-tags a:hover{
+    opacity: 0.66;
+}
+
+.minicard.module .card-title {
+    font-size: 1.3rem;
+    margin: 0 0 1rem;
+}
+
+.minicard.module .card-date-time {
+    display: block;
+    margin: 0 0 .25rem;
+    color: #777;
+}
+
+.minicard.module .card-date-time strong {
+    color: #d4d4d4;
+}
+
+.minicard-grid .minicard:not(:first-child) {
+    margin-left: -130px;
+    box-shadow: -3rem 0 3rem -2rem #000;
+}
+
+.minicard-grid .minicard:hover, 
+.minicard-grid .minicard:focus-within{
+    transform: translateY(-1rem) rotate(3deg);
+}
+
+.minicard-grid .minicard:hover~.minicard{
+    transform: translateX(130px);
+}
